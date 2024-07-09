@@ -1,5 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { removeTodo } from "../../features/todo/TodoSlice";
+import { RootState } from "../../app/store";
 
 interface Todo {
   id: string;
@@ -7,7 +8,7 @@ interface Todo {
 }
 
 const Todoes: React.FC = () => {
-  const todos = useSelector((state) => state.todos);
+  const todos = useSelector((state: RootState) => state.todos);
   const dispatch = useDispatch();
 
   return (
