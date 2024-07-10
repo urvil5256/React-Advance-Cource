@@ -1,6 +1,6 @@
-import { SetStateAction, useState } from "react";
-import useCureencyInfo from "./useCureencyInfo";
+import { useState } from "react";
 import InputBox from "./InputBox";
+import useCureencyInfo from "./useCureencyInfo";
 
 const CurrencyConverter = () => {
   const [amout, setAmout] = useState(0);
@@ -42,9 +42,7 @@ const CurrencyConverter = () => {
                 label="From"
                 amount={amout}
                 currencyOption={options}
-                onCurrencyChange={() =>
-                  setAmout(amout) as unknown as SetStateAction<number>
-                }
+                onCurrencyChange={(currency) => setFrom(currency)}
                 onAmountChange={(amout) => setAmout(amout)}
                 selectCurrency={from}
               />
@@ -82,3 +80,4 @@ const CurrencyConverter = () => {
 };
 
 export { CurrencyConverter };
+

@@ -9,5 +9,12 @@ export * from "./CurrencyConverter/InputBox";
 export * from "./Login/Login";
 export * from "./Login/Profile";
 export * from "./Theme/ToggelButton";
-export * from "./ReduxToolkit/AddTodo"
-export * from "./ReduxToolkit/Todoes"
+export * from "./ReduxToolkit/AddTodo";
+export * from "./ReduxToolkit/Todoes";
+export * from "./HOC/HOCComponent";
+export * from "./Compound/CompoundComponent";
+export * from "./ControlledUncontrolled/ControlledComponent";
+export * from "./ControlledUncontrolled/UncontrolledComponent";
+export * from "./ErrorBoundry/ErrorBoundryHandler";
+export * from "./RenderProps/RenderPropsComponent";
+export * from "./CreatePortals/Portals";

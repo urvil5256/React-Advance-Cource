@@ -1,22 +1,29 @@
 import { Dispatch, SetStateAction, useEffect, useState } from "react";
+import { Provider } from "react-redux";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { store } from "./app/store";
 import {
+  AddTodo,
   BGChanger,
+  CompoundComponent,
+  ControlledForm,
   CounterComponent,
   CurrencyConverter,
+  ErrorBoundryHandler,
+  HOCComponent,
   Home,
   PasswordGenerator,
+  Popup,
+  RenderPropsComponent,
   TailwinExample,
   ToggelButton,
-  User,
-  AddTodo,
+  UncontrolledForm,
+  User
 } from "./Components";
 import Login from "./Components/Login/Login";
 import { ThemeProvider } from "./Context/Theme";
 import { UserContextProvider } from "./Context/UserContextProvider";
 import { RouterLayout } from "./RouterLayout/RouterLayout";
-import { Provider } from "react-redux";
-import { store } from "./app/store";
 
 export interface IApp {
   setCounter: Dispatch<SetStateAction<number>>;
@@ -31,6 +38,39 @@ const routes = createBrowserRouter([
       {
         path: "",
         element: <Home />,
+      },
+      {
+        path: "advancedReactPatterns",
+        children: [
+          {
+            path: "hoc",
+            element: <HOCComponent />,
+          },
+          {
+            path: "renderProps",
+            element: <RenderPropsComponent />,
+          },
+          {
+            path: "compoundComponent",
+            element: <CompoundComponent />,
+          },
+          {
+            path: "controlled",
+            element: <ControlledForm />,
+          },
+          {
+            path: "uncontrolled",
+            element: <UncontrolledForm />,
+          },
+          {
+            path: "errorBondry",
+            element: <ErrorBoundryHandler />,
+          },
+          {
+            path: "portals",
+            element: <Popup />,
+          },
+        ],
       },
       {
         path: "bgChanger",
