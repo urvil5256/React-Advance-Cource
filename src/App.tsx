@@ -116,21 +116,6 @@ const routes = createBrowserRouter([
     ],
   },
 ]);
-
-//Second way to define a routes
-// const routes = createBrowserRouter(
-//   createRoutesFromElements(
-//     <Route path="/" element={<RouterLayout />}>
-//       <Route path="" element={<Home />} />
-//       <Route path="bgChanger" element={<BGChanger />} />
-//       <Route path="passwordGenerator" element={<PasswordGenerator />} />
-//       <Route path="tailwindAndPropsExample">
-//         <Route path="counter" element={<CounterComponent />} />
-//         <Route path="tailwindExample" element={<TailwinExample />} />
-//       </Route>
-//     </Route>
-//   )
-// );
 function App() {
   const [themeMode, setThemeMode] = useState("light");
   const darkTheme = () => {
